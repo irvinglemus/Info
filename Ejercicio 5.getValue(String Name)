@@ -1,0 +1,8 @@
+getValue(String name). Recupera el valor string de un elemento subyacente en un campo
+
+
+var gr = new GlideRecord(‘incident’);
+gr.orderBy(‘number’); 
+gr.query(‘active’, ‘true’);
+gr.next();
+gs.info(gr.getValue(‘number’));
