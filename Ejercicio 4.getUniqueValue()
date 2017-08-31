@@ -1,0 +1,16 @@
+
+getUniqueValue(). Recupera la llave primaria del registro, el cual usualmente es el sys_id a menos que otro se especifique.
+
+var consulta='sys_class_name=dmn_demand^sys_id=afeddc4c934112003b4bb095e57ffb5c';
+
+var gr = new GlideRecord(‘dmn_demand'); 
+
+gr.addEncodedQuery(consulta);
+gr.query(); 
+gr.next();
+
+var uniqueid = gr.getUniqueValue();
+if (uniqueid == 'afeddc4c934112003b4bb095e57ffb5c')
+gs.info("Dato Confirmado: " + uniqueid);
+else
+gs.info("Dato No confirmado");
