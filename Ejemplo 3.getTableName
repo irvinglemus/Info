@@ -1,0 +1,5 @@
+getTableName()Obtiene el nombre de la tabla asociada al objeto gliderecord
+
+var gr = new GlideRecord('dmn_demand'); 
+gr.query(); 
+gs.info(“La tabla "+ gr.getLabel() + " contiene " + gr.getRowCount() + " registros y son pertenecientes a la tabla " + gr.getTableName());
