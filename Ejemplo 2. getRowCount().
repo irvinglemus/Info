@@ -1,0 +1,7 @@
+getRowCount(). Recupera el número de filas el la consulta resultante.
+
+
+Recupera el número de registros que contiene la tabla de demanda
+var gr = new GlideRecord('dmn_demand'); 
+gr.query(); 
+gs.info(“Registros en la tabla de "+ gr.getLabel() + " " + gr.getRowCount());
