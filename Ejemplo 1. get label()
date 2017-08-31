@@ -1,0 +1,12 @@
+get label()
+
+//Retorna la etiqueta de un objeto.
+
+var gr = new GlideRecord(‘incident’);
+gr.orderBy(‘number’); 
+gr.query(‘active’, ‘true’);
+gr.next();
+gs.info("La etiqueta del campo Closed_by es: " + gr. closed_by.getLabel());
+gs.info("La etiqueta de la tabla es: " + gr.getLabel());
+
+
